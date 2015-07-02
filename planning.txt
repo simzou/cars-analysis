@@ -1,0 +1,52 @@
+Technical Plan
+	- delete unnecessary columns
+	- underscore + javascript visualizations
+	- javascript libraries to visualize
+
+Science Plan
+1) Possible metrics
+	- average mpg improvement
+	- goverment dollars spent per mpg improvement
+	- simple count of trade-ins
+		- not really fair since I don't want to go about normalizing by population
+		- though if you use a database, you could...
+		- would have to get maybe data on other cars...
+		- too complicated
+	- percent of traded in trucks
+	- percent of bought passenger cars
+	- percent of cars traded in for a better category
+		- mpg is better than this
+
+	Graphics to make:
+		Top 10 by cost effectiveness
+		Bottom 10 by cost effectiveness
+		Top 10 by mpg improvement 
+		Bottom 10 by mpg improvement
+		Map of mpg improvement
+		Map of cost effectivness
+
+2) Manually define region for state
+	Map it out
+
+	Graphics to make:
+		Map of sales per state
+		Pie chart of sales per region
+
+3) Do people trade in older cars
+	Count by year
+	okay to do since all sales are over 2 month period in same year
+   Do people trade in cars with more miles
+   	Count by year
+   Do people switch makes/models
+   	Double bar chart
+
+   	Graphics to make:
+   		Bar chart: x axis age of car, y-axis: num traded in
+   		Bar chart: x axis miles on car, y-axis: num traded in
+   		Bar chart: x axis: make, y-axis: num switched, num stayed
+   		Bar chart: x axis: price range, y-axis: num bought
+
+   	Not all that applicable to general population
+
+4) Would need to know how many cars proportionally were switched
+
