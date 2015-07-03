@@ -2,6 +2,13 @@ var filename = "./data/transactions-q1.json";
 google.load("visualization", "1.1", {packages:["bar", "geochart", "corechart"]});
 google.setOnLoadCallback(main);
 
+// using variable names for indexes
+var STATE = 0;
+var INVOICE_AMOUNT = 1;
+var OLD_CAR_MPG = 2;
+var NEW_CAR_MPG = 3;
+
+
 function main() {
 	$.getJSON(filename, function(json) {
 
