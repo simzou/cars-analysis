@@ -1,6 +1,6 @@
 ---
 title: West Coast = Best Coast?
-layout: page-01
+layout: page-02
 ---
 
 ### West Coast = Best Coast?
