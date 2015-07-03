@@ -10,6 +10,12 @@ var mappings = {
 		tooltipText: 'Cost per MPG gained: ',
 		formatFunction: format_money,
 		colorAxis: {colors: ['green', 'white']},
+	},
+	'transactions': {
+		numberFormat: '',
+		tooltipText: 'Number of Car Purchases: ',
+		formatFunction: format_number,
+		colorAxis: {colors: ['white', 'blue']},
 	}
 }
 
@@ -21,6 +27,10 @@ function format_percent(decimal) {
 // http://stackoverflow.com/a/14428340
 function format_money(amount) {
 	return "$" + amount.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+}
+
+function format_number(amount) {
+	return amount.toString().replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 }
 
 function draw_google_bar_chart(id, state_data, param){
@@ -81,7 +91,6 @@ function draw_map(id, state_data, param) {
 }
 
 function draw_google_pie_chart(div_id, data) {
-
 
     var data = google.visualization.arrayToDataTable(data);
 

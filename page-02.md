@@ -26,3 +26,9 @@ We use a tweaked version of the Census Bureau's definition of [regions in the Un
 Here is a pie chart showing the transactions by region.
 
 <div id="region-pie-chart"></div>
+
+The west coast, even including the the rest of the western states did not purchase more cars than other regions.
+
+Here's a map showing transactions by state:
+
+<div class="map" id="region-map"></div>

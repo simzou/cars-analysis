@@ -95,3 +95,7 @@ function format_percent(decimal) {
 function format_money(amount) {
 	return "$" + amount.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 }
+
+function format_number(amount) {
+	return amount.toString().replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+}
