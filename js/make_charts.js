@@ -33,33 +33,17 @@ function format_number(amount) {
 	return Number(amount).toLocaleString('en');
 }
 
-function draw_google_bar_chart(id, state_data, param){
-	var labels = [];
-	var costs = [];
-	var combined = [];
-	_.each(state_data, function(datum) {
-		labels.push(datum[0]);
-		costs.push(datum[1][param])
-		combined.push([datum[0], datum[1][param]]);
-	});
-
-	var chart_data = [['State', param]].concat(combined);
-
-    var data = google.visualization.arrayToDataTable(
-    	chart_data
-    );
+function draw_google_bar_chart(div_id, data) {
+    var data = google.visualization.arrayToDataTable(data);
 
     var options = {
-      chart: {
-        title: param,
-      },
-		  vAxis: {
-		  	minValue: 60,
-		  }
+      title: 'Car Transactions by Trade-in Car Year'
     };
 
-    var chart = new google.charts.Bar(document.getElementById(id));
+    var chart = new google.charts.Bar(document.getElementById(div_id));
+
     chart.draw(data, options);
+
 }
 
 function draw_map(id, state_data, param) {
@@ -103,10 +87,15 @@ function draw_google_pie_chart(div_id, data) {
     chart.draw(data, options);
 }
 
-function compile_and_insert_html(template_id, div_id, data) {
-	var template = _.template($(template_id).html());
-	var template_html = template({
-		'rows': data
-	});
-	$(div_id).html(template_html);
+function draw_google_histogram(div_id, data) {
+    var data = google.visualization.arrayToDataTable(data);
+
+var options = {
+  title: 'Lengths of dinosaurs, in meters',
+  legend: { position: 'none' },
+};
+
+var chart = new google.visualization.Histogram(document.getElementById(div_id));
+chart.draw(data, options);
+
 }

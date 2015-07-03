@@ -64,7 +64,6 @@ reader = csv.reader(in_csvfile)
 writer = csv.writer(out_csvfile)
 json_to_dump = []
 
-makes = set()
 
 territories = set(['GU', 'PR', 'DC', 'MP', 'VI'])
 
@@ -77,12 +76,13 @@ for row in reader:
 							row[trade_in_mileage],
 							row[new_vehicle_car_mileage]]
 		elif result.question == '3':
-			row_to_write = [int(row[trade_in_year]),
+			row_to_write = [
+							int(row[trade_in_year]),
 							int(row[trade_in_odometer_reading]),
 							row[trade_in_make],
-							row[new_vehicle_make]]
-		makes.add(row[trade_in_make])
-		makes.add(row[new_vehicle_make])
+							row[new_vehicle_make],
+							row[state]
+						   ]
 		writer.writerow(row_to_write)
 		json_to_dump.append(row_to_write)
 
