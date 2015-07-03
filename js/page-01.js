@@ -20,6 +20,7 @@ function main() {
 		}
 
 		draw_map('percent-map', state_aggregate_data, 'percent')
+		draw_map('cost-map', state_aggregate_data, 'cost_per_mpg')
 	})
 }
 

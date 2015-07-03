@@ -1,33 +1,27 @@
-num = 1;
-function draw_chart(id, state_data){
-	var ctx = $(id).get(0).getContext("2d");
-	var labels = [];
-	var costs = [];
-	_.each(state_data, function(datum) {
-		labels.push(datum[0]);
-		costs.push(datum[1]['cost_per_mpg'])
-	});
-
-	var data = {
-	    labels: labels,
-	    datasets: [
-	        {
-	            label: "Cost Effectivness",
-	            fillColor: "rgba(151,187,205,0.5)",
-	            strokeColor: "rgba(151,187,205,0.8)",
-	            highlightFill: "rgba(151,187,205,0.75)",
-	            highlightStroke: "rgba(151,187,205,1)",
-	            data: costs
-	        }
-	    ]
-	};
-	var options = {
-    	tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= format_money(value) %>",
-    	scaleBeginAtZero: false,
-	};
+var mappings = {
+	'percent' : {
+		numberFormat: '.##%',
+		tooltipText: 'Percent Improvment: ',
+		formatFunction: format_percent,
+		colorAxis: {colors: ['white', 'green']},
+	},
+	'cost_per_mpg': {
+		numberFormat: '$.##',
+		tooltipText: 'Cost per MPG gained: ',
+		formatFunction: format_money,
+		colorAxis: {colors: ['green', 'white']},
+	}
+}
 
 
-	var myBarChart = new Chart(ctx).Bar(data, options);
+function format_percent(decimal) {
+	return (decimal * 100).toFixed(2) + '%';
+}
+
+// code taken from: 
+// http://stackoverflow.com/a/14428340
+function format_money(amount) {
+	return "$" + amount.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 }
 
 function draw_google_chart(id, state_data, param){
@@ -56,30 +50,34 @@ function draw_google_chart(id, state_data, param){
     };
 
     var chart = new google.charts.Bar(document.getElementById(id));
-    compile_and_insert_html("#table-template", "#table-" + num++, combined);
     chart.draw(data, options);
 }
 
 function draw_map(id, state_data, param) {
 	var combined = [];
 	_.each(state_data, function(datum){
-		combined.push([datum[0], datum[1][param]]);
+		combined.push([datum[0], datum[1][param], mappings[param]['tooltipText'] + mappings[param]['formatFunction'](datum[1][param])]);
 	});
 
-	var chart_data = [['State', param]].concat(combined);
-    var data = google.visualization.arrayToDataTable(
-    	chart_data
-    );
+	//var chart_data = [['State', param]].concat(combined);
+    
+	var dataTable = new google.visualization.DataTable();
+	dataTable.addColumn('string', 'State');
+	// Use custom HTML content for the domain tooltip.
+	dataTable.addColumn('number', param);
+	dataTable.addColumn({type: 'string', role: 'tooltip'});
+	dataTable.addRows(combined);
 
     var options = {
     	region: 'US',
     	resolution: 'provinces',
-    	colorAxis: {colors: ['green', 'white']}
+    	colorAxis: mappings[param]['colorAxis'],
+    	legend:{numberFormat:mappings[param]['numberFormat']}
     };
 
-    var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+    var chart = new google.visualization.GeoChart(document.getElementById(id));
 
-    chart.draw(data, options);
+    chart.draw(dataTable, options);
 
 }
 

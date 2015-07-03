@@ -178,92 +178,94 @@ The first is used by the NHTSA in their [summary statistics](http://www.nhtsa.go
 
 The second metric is similar but takes into account cost. So if a 20 mpg vehicle is traded in for a 30 mpg and the customer was issued a $4500 voucher, then the cost per mpg is $4500 / 10 mpg = $450 per mile per gallon gained. Here, a lower number is better as it means more cost efficient. 
 
+#### Top 10
+
 <table class="table">
-<tbody><tr>
-    <th>Rank</th>
-    <th>State</th>
-    <th>Cost per MPG Gained</th>
-</tr>
+	<tbody><tr>
+	<th>Rank</th>
+	<th>State</th>
+	<th>Cost per MPG Gained</th>
+	</tr>
 
 
-    <tr>
-        <td>1</td>
-        <td>California</td>
-        <td>$404.31</td>
-    </tr>
+	<tr>
+	    <td>1</td>
+	    <td>California</td>
+	    <td>$404.31</td>
+	</tr>
 
 
-    <tr>
-        <td>2</td>
-        <td>Oregon</td>
-        <td>$424.15</td>
-    </tr>
+	<tr>
+	    <td>2</td>
+	    <td>Oregon</td>
+	    <td>$424.15</td>
+	</tr>
 
 
-    <tr>
-        <td>3</td>
-        <td>Utah</td>
-        <td>$424.86</td>
-    </tr>
+	<tr>
+	    <td>3</td>
+	    <td>Utah</td>
+	    <td>$424.86</td>
+	</tr>
 
 
-    <tr>
-        <td>4</td>
-        <td>Arizona</td>
-        <td>$427.62</td>
-    </tr>
+	<tr>
+	    <td>4</td>
+	    <td>Arizona</td>
+	    <td>$427.62</td>
+	</tr>
 
 
-    <tr>
-        <td>5</td>
-        <td>Colorado</td>
-        <td>$432.95</td>
-    </tr>
+	<tr>
+	    <td>5</td>
+	    <td>Colorado</td>
+	    <td>$432.95</td>
+	</tr>
 
 
-    <tr>
-        <td>6</td>
-        <td>Washington</td>
-        <td>$433.05</td>
-    </tr>
+	<tr>
+	    <td>6</td>
+	    <td>Washington</td>
+	    <td>$433.05</td>
+	</tr>
 
 
-    <tr>
-        <td>7</td>
-        <td>Nevada</td>
-        <td>$438.57</td>
-    </tr>
+	<tr>
+	    <td>7</td>
+	    <td>Nevada</td>
+	    <td>$438.57</td>
+	</tr>
 
 
-    <tr>
-        <td>8</td>
-        <td>Virginia</td>
-        <td>$442.08</td>
-    </tr>
+	<tr>
+	    <td>8</td>
+	    <td>Virginia</td>
+	    <td>$442.08</td>
+	</tr>
 
 
-    <tr>
-        <td>9</td>
-        <td>Connecticut</td>
-        <td>$446.00</td>
-    </tr>
+	<tr>
+	    <td>9</td>
+	    <td>Connecticut</td>
+	    <td>$446.00</td>
+	</tr>
 
 
-    <tr>
-        <td>10</td>
-        <td>Montana</td>
-        <td>$446.89</td>
-    </tr>
-
-
+	<tr>
+	    <td>10</td>
+	    <td>Montana</td>
+	    <td>$446.89</td>
+	</tr>
 </tbody></table>
 
+#### Bottom 10
+
 <table class="table">
-<tbody><tr>
-    <th>Rank</th>
-    <th>State</th>
-    <th>Cost per MPG Gained</th>
-</tr>
+	<tbody><tr>
+	    <th>Rank</th>
+	    <th>State</th>
+	    <th>Cost per MPG Gained</th>
+	</tr>
 
 
     <tr>
@@ -335,7 +337,6 @@ The second metric is similar but takes into account cost. So if a 20 mpg vehicle
         <td>$484.20</td>
     </tr>
 
-
 </tbody></table>
 
-
+<div id="cost-map"></div>
