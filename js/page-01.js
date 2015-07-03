@@ -55,3 +55,14 @@ function process_state_data(data) {
 	}
 	return aggregate_data;
 }
+
+
+function format_percent(decimal) {
+	return (decimal * 100).toFixed(2) + '%';
+}
+
+// code taken from: 
+// http://stackoverflow.com/a/14428340
+function format_money(amount) {
+	return "$" + amount.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+}
