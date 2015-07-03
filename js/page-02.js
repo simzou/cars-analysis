@@ -28,7 +28,7 @@ function main() {
 }
 
 function prepare_data_for_pie_chart(grouped_by_region) {
-	data = ["Region", "Transactions"];
+	data = [["Region", "Transactions"]];
 	for (region in grouped_by_region) {
 		data.push([region, grouped_by_region[region].length])
 	}
