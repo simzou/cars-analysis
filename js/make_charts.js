@@ -13,7 +13,6 @@ var mappings = {
 	}
 }
 
-
 function format_percent(decimal) {
 	return (decimal * 100).toFixed(2) + '%';
 }
@@ -24,7 +23,7 @@ function format_money(amount) {
 	return "$" + amount.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 }
 
-function draw_google_chart(id, state_data, param){
+function draw_google_bar_chart(id, state_data, param){
 	var labels = [];
 	var costs = [];
 	var combined = [];
@@ -79,6 +78,20 @@ function draw_map(id, state_data, param) {
 
     chart.draw(dataTable, options);
 
+}
+
+function draw_google_pie_chart(div_id, data) {
+
+
+    var data = google.visualization.arrayToDataTable(data);
+
+    var options = {
+      title: 'Car Transactions By Region'
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
 }
 
 function compile_and_insert_html(template_id, div_id, data) {

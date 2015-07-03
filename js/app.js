@@ -47,11 +47,11 @@ function use_aggregate_data(state_aggregate_data, param) {
 	var top_10_states = _.first(state_aggregate_data,10)
 	var bottom_10_states = _.last(state_aggregate_data,10)
 	bottom_10_states.reverse();
-	draw_google_chart("top10" + param, top_10_states, param);
-	draw_google_chart("bottom10" + param, bottom_10_states, param);
-	console.log(state_aggregate_data);
-	console.log(top_10_states);
-	console.log(bottom_10_states);
+	draw_google_bar_chart("top10" + param, top_10_states, param);
+	draw_google_bar_chart("bottom10" + param, bottom_10_states, param);
+	// console.log(state_aggregate_data);
+	// console.log(top_10_states);
+	// console.log(bottom_10_states);
 }
 
 // expects array of arrays

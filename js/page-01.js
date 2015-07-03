@@ -1,5 +1,5 @@
 var filename = "./data/transactions-q1.json";
-google.load("visualization", "1.1", {packages:["bar", "geochart", "corechart"]});
+google.load("visualization", "1.1", {packages:["geochart"]});
 google.setOnLoadCallback(main);
 
 // using variable names for indexes
