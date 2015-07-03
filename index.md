@@ -25,6 +25,7 @@ Use the buttons and the top and bottom of the pages to navigate, or use the foll
 - HTML / CSS / JavaScript / jQuery
 - Python
 - Bash Scripting
+- Git
 - [Underscore.js](http://underscorejs.org/)
 - [Google Charts](https://developers.google.com/chart/)
 - [Markdown](http://daringfireball.net/projects/markdown/)
