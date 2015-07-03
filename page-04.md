@@ -1,6 +1,6 @@
 ---
 title: A wild success
-layout: index
+layout: page-04
 ---
 
 ### A wild success?
