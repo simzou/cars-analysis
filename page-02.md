@@ -32,3 +32,5 @@ The west coast, even including the the rest of the western states did not purcha
 Here's a map showing transactions by state:
 
 <div class="map" id="region-map"></div>
+ 
+While California purchased more cars than any other state, other regions generally had multiple regions with high amounts of car purchases so the west coast as a region did not purchase more fuel efficient cars than consumers in other regions.
