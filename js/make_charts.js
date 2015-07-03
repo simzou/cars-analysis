@@ -21,19 +21,19 @@ var mappings = {
 		numberFormat: '',
 		tooltipText: 'Average Age of Trade-in Vehicle in Years: ',
 		formatFunction: format_number,
-		colorAxis: {colors: ['white', 'blue']},
+		colorAxis: {colors: ['white', 'darkgrey']},
 	},
 	'avg_odom': {
 		numberFormat: '',
 		tooltipText: 'Average Odometer Reading of Trade-in Vehicle: ',
 		formatFunction: format_number,
-		colorAxis: {colors: ['white', 'blue']},
+		colorAxis: {colors: ['white', 'teal']},
 	},
 	'avg_msrp': {
 		numberFormat: '',
 		tooltipText: 'Average MSRP of Vehicle Purchase: ',
 		formatFunction: format_money,
-		colorAxis: {colors: ['white', 'blue']},
+		colorAxis: {colors: ['white', 'green']},
 	}
 
 }
@@ -55,11 +55,9 @@ function format_number(amount) {
 
 function draw_google_bar_chart(div_id, data) {
     var data = google.visualization.arrayToDataTable(data);
-
+    var position = div_id === "loyalty-bar-chart" ? 'left' : 'none';
     var options = {
-      legend: { position: 'none' },
-
-      title: 'Car Transactions by Trade-in Car Year'
+      legend: { position: position },
     };
 
     var chart = new google.charts.Bar(document.getElementById(div_id));
