@@ -1,6 +1,7 @@
 import csv
 import json
 import sys
+import argparse
 
 # mapping of field to column number
 vendor_id	=	0
@@ -46,24 +47,44 @@ new_vehicle_drive_train	=	39
 new_vehicle_car_mileage	=	40
 new_vehicle_MSRP	=	41
 
-in_csvfile = open(sys.argv[1], 'r')
-out_csvfile = open(sys.argv[2], 'w')
-out_jsonfile = open(sys.argv[3], 'w')
+parser = argparse.ArgumentParser()
+
+parser.add_argument('--question', action='store', dest='question')
+parser.add_argument('--inputcsv', action='store', dest='in_csvfile')
+parser.add_argument('--outputcsv', action='store', dest='out_csvfile')
+parser.add_argument('--outputjson', action='store', dest='out_jsonfile')
+result = parser.parse_args()
+
+
+in_csvfile = open(result.in_csvfile, 'r')
+out_csvfile = open(result.out_csvfile, 'w')
+out_jsonfile = open(result.out_jsonfile, 'w')
 
 reader = csv.reader(in_csvfile)
 writer = csv.writer(out_csvfile)
 json_to_dump = []
+
+makes = set()
 
 territories = set(['GU', 'PR', 'DC', 'MP', 'VI'])
 
 reader.next() # skip the first line of headers
 for row in reader:
 	if row[state] not in territories:
-		row_to_write = [row[state],
-						row[invoice_amount],
-						row[trade_in_mileage],
-						row[new_vehicle_car_mileage]]
+		if result.question == '1':
+			row_to_write = [row[state],
+							row[invoice_amount],
+							row[trade_in_mileage],
+							row[new_vehicle_car_mileage]]
+		elif result.question == '3':
+			row_to_write = [int(row[trade_in_year]),
+							int(row[trade_in_odometer_reading]),
+							row[trade_in_make],
+							row[new_vehicle_make]]
+		makes.add(row[trade_in_make])
+		makes.add(row[new_vehicle_make])
 		writer.writerow(row_to_write)
 		json_to_dump.append(row_to_write)
 
 json.dump(json_to_dump, out_jsonfile)
+print makes
