@@ -30,7 +30,7 @@ function format_money(amount) {
 }
 
 function format_number(amount) {
-	return amount.toString().replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
+	return Number(amount).toLocaleString('en');
 }
 
 function draw_google_bar_chart(id, state_data, param){
