@@ -55,5 +55,5 @@ var states = {
         'WA': {'region': 'West Coast', 'name': 'Washington'},
         'WI': {'region': 'Midwest', 'name': 'Wisconsin'},
         'WV': {'region': 'South', 'name': 'West Virginia'},
-        'WY': {'region': 'West', 'name': 'Wyoming'
+        'WY': {'region': 'West', 'name': 'Wyoming'}
 }
