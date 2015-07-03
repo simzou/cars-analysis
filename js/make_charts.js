@@ -1,3 +1,4 @@
+num = 1;
 function draw_chart(id, state_data){
 	var ctx = $(id).get(0).getContext("2d");
 	var labels = [];
@@ -24,6 +25,8 @@ function draw_chart(id, state_data){
     	tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= format_money(value) %>",
     	scaleBeginAtZero: false,
 	};
+
+
 	var myBarChart = new Chart(ctx).Bar(data, options);
 }
 
@@ -39,8 +42,6 @@ function draw_google_chart(id, state_data, param){
 
 	var chart_data = [['State', param]].concat(combined);
 
-	console.log(chart_data);
-
     var data = google.visualization.arrayToDataTable(
     	chart_data
     );
@@ -55,7 +56,7 @@ function draw_google_chart(id, state_data, param){
     };
 
     var chart = new google.charts.Bar(document.getElementById(id));
-
+    compile_and_insert_html("#table-template", "#table-" + num++, combined);
     chart.draw(data, options);
 }
 
@@ -80,4 +81,12 @@ function draw_map(id, state_data, param) {
 
     chart.draw(data, options);
 
+}
+
+function compile_and_insert_html(template_id, div_id, data) {
+	var template = _.template($(template_id).html());
+	var template_html = template({
+		'rows': data
+	});
+	$(div_id).html(template_html);
 }
