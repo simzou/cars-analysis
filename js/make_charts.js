@@ -57,6 +57,8 @@ function draw_google_bar_chart(div_id, data) {
     var data = google.visualization.arrayToDataTable(data);
 
     var options = {
+      legend: { position: 'none' },
+
       title: 'Car Transactions by Trade-in Car Year'
     };
 
