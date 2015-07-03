@@ -19,6 +19,6 @@ function main() {
 			state_aggregate_data.push([state].concat(processed_data));
 		}
 
-		draw_map('regions_div', state_aggregate_data, 'cost_per_mpg')
+		draw_map('percent-map', state_aggregate_data, 'percent')
 	})
 }
