@@ -11,3 +11,7 @@
 	display: block;
 	text-align: center;
 }
+
+#region-pie-chart {
+	height: 500px;
+}

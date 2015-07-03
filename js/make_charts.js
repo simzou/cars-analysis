@@ -89,7 +89,7 @@ function draw_google_pie_chart(div_id, data) {
       title: 'Car Transactions By Region'
     };
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+    var chart = new google.visualization.PieChart(document.getElementById(div_id));
 
     chart.draw(data, options);
 }
