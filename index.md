@@ -30,8 +30,9 @@ Use the buttons and the top and bottom of the pages to navigate, or use the foll
 - [Markdown](http://daringfireball.net/projects/markdown/)
 - [GitHub Pages](https://pages.github.com/)
 
-#### Implementation / Assumptions
+#### Implementation / Assumptions / Appendix
 
+- Preliminary planning document for project can be found [here](https://github.com/simzou/cars-analysis/blob/gh-pages/planning.txt)
 - The [data set](ftp://ftp.nhtsa.dot.gov/CARS/CARS_PAID_Final.txt) provided by the NHTSA was used. 
 - Other related data sets (regarding canceled transactions and such) were not considered.
 - We use [this python script](https://github.com/simzou/cars-analysis/blob/gh-pages/data/csv_to_json.py) (see [usage here](https://github.com/simzou/cars-analysis/blob/gh-pages/data/convert_data_files.sh)) to strip the data set of columns unnecessary for our analysis and output it to a json file
