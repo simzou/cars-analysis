@@ -81,10 +81,10 @@ for row in reader:
 							int(row[trade_in_odometer_reading]),
 							row[trade_in_make],
 							row[new_vehicle_make],
+							int(row[new_vehicle_MSRP]),
 							row[state]
 						   ]
 		writer.writerow(row_to_write)
 		json_to_dump.append(row_to_write)
 
 json.dump(json_to_dump, out_jsonfile)
-print makes

@@ -16,8 +16,28 @@ var mappings = {
 		tooltipText: 'Number of Car Purchases: ',
 		formatFunction: format_number,
 		colorAxis: {colors: ['white', 'blue']},
+	},
+	'avg_age': {
+		numberFormat: '',
+		tooltipText: 'Average Age of Trade-in Vehicle in Years: ',
+		formatFunction: format_number,
+		colorAxis: {colors: ['white', 'blue']},
+	},
+	'avg_odom': {
+		numberFormat: '',
+		tooltipText: 'Average Odometer Reading of Trade-in Vehicle: ',
+		formatFunction: format_number,
+		colorAxis: {colors: ['white', 'blue']},
+	},
+	'avg_msrp': {
+		numberFormat: '',
+		tooltipText: 'Average MSRP of Vehicle Purchase: ',
+		formatFunction: format_money,
+		colorAxis: {colors: ['white', 'blue']},
 	}
+
 }
+
 
 function format_percent(decimal) {
 	return (decimal * 100).toFixed(2) + '%';
@@ -85,17 +105,4 @@ function draw_google_pie_chart(div_id, data) {
     var chart = new google.visualization.PieChart(document.getElementById(div_id));
 
     chart.draw(data, options);
-}
-
-function draw_google_histogram(div_id, data) {
-    var data = google.visualization.arrayToDataTable(data);
-
-var options = {
-  title: 'Lengths of dinosaurs, in meters',
-  legend: { position: 'none' },
-};
-
-var chart = new google.visualization.Histogram(document.getElementById(div_id));
-chart.draw(data, options);
-
 }
