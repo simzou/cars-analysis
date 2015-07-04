@@ -5,7 +5,7 @@ layout: index
 
 ### Overview
 
-This is an analysis of the 2010 Cash for Clunkers Program (or CARS) dataset found [here](http://www.nhtsa.gov/Laws+&+Regulations/CARS+Program+Transaction+Data+and+Reports). 
+This is an analysis of the 2010 Cash for Clunkers Program (or CARS) dataset found [here](http://www.nhtsa.gov/Laws+&+Regulations/CARS+Program+Transaction+Data+and+Reports). It was a 3 billion dollar US government program intended to stimulate the economy and incentivize the use of more fuel efficient vehicles by paying participants $4500 dollars to trade in an old vehicle for a more fuel efficient one. This report summarizes the results of the program and compares how the program did in various states and regions.
 
 Use the buttons and the top and bottom of the pages to navigate, or use the following links.
 
