@@ -55,7 +55,7 @@ We see that in the northern central United States, vehicles purchased tend to be
 
 ### By Brand Loyalty
 
-THe following is a bar chart showing the number of customers who stayed with the same brand of car or switched to a new one. 
+The following is a bar chart showing the number of customers who stayed with the same brand of car or switched to a new one. 
 
 <div class="chart" id="loyalty-bar-chart"></div>
 
