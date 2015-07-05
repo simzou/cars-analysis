@@ -3,7 +3,7 @@ var mappings = {
 		numberFormat: '.##%',
 		tooltipText: 'Percent Improvment: ',
 		formatFunction: format_percent,
-		colorAxis: {colors: ['white', 'green']},
+		colorAxis: {colors: ['white', 'blue']},
 	},
 	'cost_per_mpg': {
 		numberFormat: '$.##',
@@ -21,7 +21,7 @@ var mappings = {
 		numberFormat: '',
 		tooltipText: 'Average Age of Trade-in Vehicle in Years: ',
 		formatFunction: format_number,
-		colorAxis: {colors: ['white', 'darkgrey']},
+		colorAxis: {colors: ['white', 'orange']},
 	},
 	'avg_odom': {
 		numberFormat: '',
