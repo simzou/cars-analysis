@@ -13,7 +13,7 @@ We define two metrics for success.
 
 The first is used by the NHTSA in their [summary statistics](http://www.nhtsa.gov/CARS-archive/reports/summary-statistics.pdf) as average fuel economy increase. For example, if a 20 mpg vehicle is traded in for a 30 mpg, that's a 50% improvement. Then for each state we divide the sum of all the new cars' mpg by the old cars' mpg to get the improvement per state. Higher improvement is better.
 
-##### Top 10
+#### Top 10
 
 <table>
     <tr>
@@ -174,7 +174,7 @@ The first is used by the NHTSA in their [summary statistics](http://www.nhtsa.go
 
 </tbody></table>
 
-#### Map
+#### MPG Percent Improvement by State
 
 <div class="map" id="percent-map">Loading...</div>
 
@@ -341,6 +341,6 @@ The second metric is similar but takes into account cost. So if a 20 mpg vehicle
 
 </tbody></table>
 
-#### Map
+#### Cost per MPG Gained by State
 
 <div class="map" id="cost-map">Loading...</div>
