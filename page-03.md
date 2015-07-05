@@ -23,7 +23,7 @@ We see that most people in this dataset buy a new car when their current one is 
 
 The following is a map showing the average age of cars that were traded in for each state:
 
-#### Map of Number of Cars Traded In by Model Year
+#### Average Age of Cars Traded In by State
 
 <div class="chart" id="age-map">Loading...</div>
 
@@ -41,7 +41,7 @@ It similarly follows a semi-normal distribution. Customers are unlikely to trade
 
 The following is a map showing the average miles on a car being traded in for each state. 
 
-#### Number of Cars Traded In by Odometer Reading (Miles) by State
+#### Average Odometer Reading (Miles) of Cars Traded In by State
 
 <div class="chart" id="odom-map">Loading...</div>
 
@@ -59,7 +59,7 @@ Similar to age and miles, this is probably not entirely representative of the ge
 
 The following is a map showing the average price of a car being bought for each state.
 
-#### Number of Cars Purchased by MSRP by State
+#### Average MSRP of New Car Purchased by State
 
 <div class="chart" id="msrp-map">Loading...</div>
 
