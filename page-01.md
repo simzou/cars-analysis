@@ -176,7 +176,7 @@ The first is used by the NHTSA in their [summary statistics](http://www.nhtsa.go
 
 #### Map
 
-<div class="map" id="percent-map"></div>
+<div class="map" id="percent-map">Loading...</div>
 
 The second metric is similar but takes into account cost. So if a 20 mpg vehicle is traded in for a 30 mpg and the customer was issued a $4500 voucher, then the cost per mpg is $4500 / 10 mpg = $450 per mile per gallon gained. Here, a lower number is better as it means more cost efficient. 
 
@@ -343,4 +343,4 @@ The second metric is similar but takes into account cost. So if a 20 mpg vehicle
 
 #### Map
 
-<div class="map" id="cost-map"></div>
+<div class="map" id="cost-map">Loading...</div>
