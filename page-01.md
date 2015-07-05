@@ -3,17 +3,17 @@ title: Metrics of Success
 layout: page-01
 ---
 
-### Metrics of Success
+## Metrics of Success
 
 Problem 1: Define one or more metrics that can be used to measure the success of the program.  Identify the 10 most successful states and the 10 least successful states based on your metric(s), and show the performance in these 20 states.
 
-#### Defining the Metric
+### Defining the Metric
 
 We define two metrics for success. 
 
 The first is used by the NHTSA in their [summary statistics](http://www.nhtsa.gov/CARS-archive/reports/summary-statistics.pdf) as average fuel economy increase. For example, if a 20 mpg vehicle is traded in for a 30 mpg, that's a 50% improvement. Then for each state we divide the sum of all the new cars' mpg by the old cars' mpg to get the improvement per state. Higher improvement is better.
 
-#### Top 10
+### Top 10
 
 <table>
     <tr>
@@ -94,7 +94,7 @@ The first is used by the NHTSA in their [summary statistics](http://www.nhtsa.go
 
 </table>
 
-#### Bottom 10
+### Bottom 10
 
 <table>
     <tbody><tr>
@@ -180,7 +180,7 @@ The first is used by the NHTSA in their [summary statistics](http://www.nhtsa.go
 
 The second metric is similar but takes into account cost. So if a 20 mpg vehicle is traded in for a 30 mpg and the customer was issued a $4500 voucher, then the cost per mpg is $4500 / 10 mpg = $450 per mile per gallon gained. Here, a lower number is better as it means more cost efficient. 
 
-#### Top 10
+### Top 10
 
 <table class="table">
 	<tbody><tr>
@@ -260,7 +260,7 @@ The second metric is similar but takes into account cost. So if a 20 mpg vehicle
 	</tr>
 </tbody></table>
 
-#### Bottom 10
+### Bottom 10
 
 <table class="table">
 	<tbody><tr>
