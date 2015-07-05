@@ -25,12 +25,12 @@ We use a tweaked version of the Census Bureau's definition of [regions in the Un
 
 Here is a pie chart showing the transactions by region.
 
-<div id="region-pie-chart"></div>
+<div id="region-pie-chart">Loading...</div>
 
 The west coast, even including the the rest of the western states did not purchase more cars than other regions.
 
 Here's a map showing transactions by state:
 
-<div class="map" id="region-map"></div>
+<div class="map" id="region-map">Loading...</div>
  
 While California purchased more cars than any other state, other regions generally had multiple regions with high amounts of car purchases so the west coast as a region did not purchase more fuel efficient cars than consumers in other regions.
