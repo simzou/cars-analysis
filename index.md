@@ -37,8 +37,21 @@ Use the buttons and the top and bottom of the pages to navigate, or use the foll
 - Preliminary planning document for project can be found [here](https://github.com/simzou/cars-analysis/blob/gh-pages/planning.txt)
 - The [data set](ftp://ftp.nhtsa.dot.gov/CARS/CARS_PAID_Final.txt) provided by the NHTSA was used. 
 - Other related data sets (regarding canceled transactions and such) were not considered.
-- We use [this python script](https://github.com/simzou/cars-analysis/blob/gh-pages/data/csv_to_json.py) (see [usage here](https://github.com/simzou/cars-analysis/blob/gh-pages/data/convert_data_files.sh)) to strip the data set of columns unnecessary for our analysis and output it to a json file
-- The utility functions provided by underscore.js are then used to manipulate the data into the format necessary for Google charts.
 - Data relating to US territories was removed
-- Pages may be slow to load as it has to download the data and run operations on them to display visualizations
-- Pages were written in a mix of markdown and HTML syntax which is then automatically converted to html by github pages
+- Pages may be slow to load as it has to download the data (~20-30 MB) and run operations on them client-side to display visualizations
+- Theme uses responsive design and is mobile friendly
+
+##### Steps
+1. We use [this python script](https://github.com/simzou/cars-analysis/blob/gh-pages/data/csv_to_json.py) (see [usage here](https://github.com/simzou/cars-analysis/blob/gh-pages/data/convert_data_files.sh)) to strip the data set of columns unnecessary for our analysis and output it to json files
+2. jQuery is used to make an AJAX call to load the json files
+3. The utility functions provided by [underscore](http://underscorejs.org/) are then used to manipulate the data into the format necessary for Google charts as necessary for each individual page:
+	- [Code for Page 01](https://github.com/simzou/cars-analysis/blob/gh-pages/js/page-01.js)
+	- [Code for Page 02](https://github.com/simzou/cars-analysis/blob/gh-pages/js/page-02.js)
+	- [Code for Page 03](https://github.com/simzou/cars-analysis/blob/gh-pages/js/page-03.js)
+4. Data is then passed to [functions to make the charts](https://github.com/simzou/cars-analysis/blob/gh-pages/js/make_charts.js) and attach them to the page.
+5. Pages were written in a mix of markdown and HTML syntax which is then automatically converted to html by github pages
+	- [Home](https://github.com/simzou/cars-analysis/blob/gh-pages/index.md)
+	- [Page 01](https://github.com/simzou/cars-analysis/blob/gh-pages/page-01.md)
+	- [Page 02](https://github.com/simzou/cars-analysis/blob/gh-pages/page-02.md)
+	- [Page 03](https://github.com/simzou/cars-analysis/blob/gh-pages/page-03.md)
+	- [Page 04](https://github.com/simzou/cars-analysis/blob/gh-pages/page-04.md)
