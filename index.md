@@ -32,7 +32,7 @@ Use the buttons and the top and bottom of the pages to navigate, or use the foll
 - [GitHub Pages](https://pages.github.com/)
 - [Cayman Theme](https://github.com/jasonlong/cayman-theme) by [Jason Long](https://twitter.com/jasonlong)
 
-#### Implementation / Assumptions / Appendix
+#### Implementation Details / Assumptions
 
 - Preliminary planning document for project can be found [here](https://github.com/simzou/cars-analysis/blob/gh-pages/planning.txt)
 - The [data set](ftp://ftp.nhtsa.dot.gov/CARS/CARS_PAID_Final.txt) provided by the NHTSA was used. 
@@ -41,7 +41,7 @@ Use the buttons and the top and bottom of the pages to navigate, or use the foll
 - Pages may be slow to load as it has to download the data (~20-30 MB) and run operations on them client-side to display visualizations
 - Theme uses responsive design and is mobile friendly
 
-##### Steps
+#### Steps
 1. We use [this python script](https://github.com/simzou/cars-analysis/blob/gh-pages/data/csv_to_json.py) (see [usage here](https://github.com/simzou/cars-analysis/blob/gh-pages/data/convert_data_files.sh)) to strip the data set of columns unnecessary for our analysis and output it to json files
 2. jQuery is used to make an AJAX call to load the json files
 3. The utility functions provided by [underscore](http://underscorejs.org/) are then used to manipulate the data into the format necessary for Google charts as necessary for each individual page:
